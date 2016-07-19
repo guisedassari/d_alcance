@@ -13,3 +13,7 @@ $this->table->set_heading('Categoria', 'Modalidade', 'Curso', 'Duracção', 'Des
 $this->table->add_row('Curso Tecnico', 'A Distancia', 'Curso de Informatica', '6 Meses', 'Curso Muito Bom', 'asdfasdfasf', '1', 'Ativo', 'Eiditar Excluir');
 
 echo $this->table->generate();
+
+foreach ($dados as $dado) {
+    var_dump($dado);    
+}

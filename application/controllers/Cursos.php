@@ -13,8 +13,9 @@ class Cursos extends CI_Controller {
     }
 
     public function index() {
-
-        $this->load->templete("admin/cursos/index.php");
+        $this->load->model('cursos_model', 'cursos');
+        $dados = $this->cursos->visualizar()->result();
+        $this->load->templete("admin/cursos/index.php", $dados);
     }
 
     public function add() {
