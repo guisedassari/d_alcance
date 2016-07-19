@@ -18,15 +18,13 @@ class Cursos extends CI_Controller {
     }
 
     public function add() {
-        $this->form_validation->set_rules('categoria', 'CATEGORIAAA', 'required|max_length[12]');
-
-        if ($this->form_validation->run() == true) {
-          $dados = elements(array('categoria','modalidade','status'), $this->input->post());
-          
-          $this->load->model('cursos_model','cursos');
-          $this->cursos->salvar($dados);
-        } 
-
+        $dados = $this->input->post();
+        
+        debbug($dados);
+        if ($dados != null) {
+            $this->load->model('cursos_model', 'cursos');
+            $this->cursos->salvar($dados);
+        }
         $this->load->templete("admin/cursos/add.php");
     }
 
