@@ -14,7 +14,7 @@ echo form_textarea(array('class' => 'form-control', 'name' => 'descricao'));
 echo form_label('Modulos');
 echo form_textarea(array('class' => 'form-control', 'name' => 'modulos'));
 echo form_label('Ordem');
-echo form_input(array('class' => 'form-control', 'name' => 'duracao', 'type' => 'number'));
+echo form_input(array('class' => 'form-control', 'name' => 'ordem', 'type' => 'number'));
 echo form_label('Status');
 echo form_dropdown(array('class' => 'form-control','name' => 'status', ), array('ativo' => 'Ativo','inativo' => 'Inativo'));
 echo form_button(array('class'=> 'btn btn-info','type' => 'submit','content'=> '<i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar'));

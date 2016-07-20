@@ -11,7 +11,10 @@ class Cursos_model extends CI_Model {
     }
 
     public function visualizar() {
-        return $this->db->get('cursos');
+        return $this->db->get('cursos')->result_array();
     }
-
+    
+    public function deletar($id = null) {
+        return $this->db->delete('cursos', array('id_curso' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
+    }
 }
