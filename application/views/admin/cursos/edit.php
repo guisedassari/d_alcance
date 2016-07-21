@@ -1,0 +1,23 @@
+<?php
+//debbug($curso);
+echo form_open('cursos/editar', array('rule' => 'form', 'class' => 'form_add'));
+echo form_hidden('id_curso', $curso->id_curso);
+echo form_label('Categoria');
+echo form_input(array('class' => 'form-control', 'name' => 'categoria', 'id' => 'categoria', 'value' => $curso->categoria, 'autofocus' => 'true'));
+echo validation_errors('<p class="alert alert-danger">', '</p>');
+echo form_label('Modalidade');
+echo form_input(array('class' => 'form-control', 'name' => 'modalidade', 'value' => $curso->modalidade));
+echo form_label('Nome do Curso');
+echo form_input(array('class' => 'form-control', 'name' => 'nome_curso', 'value' => $curso->nome_curso));
+echo form_label('Duração');
+echo form_input(array('class' => 'form-control', 'name' => 'duracao', 'value' => $curso->duracao));
+echo form_label('Descrição');
+echo form_textarea(array('class' => 'form-control', 'name' => 'descricao', 'value' => $curso->descricao));
+echo form_label('Modulos');
+echo form_textarea(array('class' => 'form-control', 'name' => 'modulos', 'value' => $curso->modulos));
+echo form_label('Ordem');
+echo form_input(array('class' => 'form-control', 'name' => 'ordem', 'type' => 'number', 'value' => $curso->ordem));
+echo form_label('Status');
+echo form_dropdown(array('class' => 'form-control','name' => 'status', ), array('ativo' => 'Ativo','inativo' => 'Inativo'), array($curso->status));
+echo form_button(array('class'=> 'btn btn-info','type' => 'submit','content'=> '<i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar'));
+echo form_close();
