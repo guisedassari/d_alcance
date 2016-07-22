@@ -23,7 +23,7 @@ foreach ($cursos as $curso) {
             $curso['modulos'], 
             $curso['ordem'], 
             $curso['status'],
-            anchor("cursos/edit/{$curso['id_curso']}", 'editar', array('class' => 'btn btn-primary')),
+            anchor("cursos/edit/{$curso['id_curso']}", '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', array('class' => 'btn btn-primary')),
             anchor("cursos/deleta/{$curso['id_curso']}", '<i class="fa fa-trash" aria-hidden="true"></i>', array('class' => 'btn btn-danger'))
                     ); 
 }

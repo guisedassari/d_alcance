@@ -17,8 +17,8 @@ class Cursos extends CI_Controller {
 
     public function index() {
         $cursos = $this->cursos->visualizar();
-        $dados = array('cursos' => $cursos);
-        $this->load->templete("admin/cursos/index.php", $dados);
+        
+        $this->load->templete("admin/cursos/index.php", compact("cursos"));
     }
 
     public function add() {
@@ -40,11 +40,8 @@ class Cursos extends CI_Controller {
 
     public function edit($id_curso) {
         if ($id_curso != null) {
-
             $curso = $this->cursos->visualizar_id($id_curso);
-            //debbug($curso);
-            $dados = array('curso' => $curso);
-            $this->load->templete("admin/cursos/edit.php", $dados);
+            $this->load->templete("admin/cursos/edit.php", compact("curso"));
         } else {
             redirect('/');
         }
