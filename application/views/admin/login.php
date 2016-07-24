@@ -16,6 +16,7 @@
 
         <!-- Custom CSS -->
         <link href="<?= base_url('tema/dist/css/sb-admin-2.css') ?>" rel="stylesheet">
+        <link href="<?= base_url('tema/dist/css/style.css') ?>" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="<?= base_url('tema/bower_components/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
@@ -31,7 +32,7 @@
                     ?>
                     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">SB Admin 2</h3>
+                            <?= img('tema/img/Kairos.png', FALSE, array('class' => 'kairos')); ?>
                         </div>
                         <div class="panel-body">
                             <?php
@@ -42,7 +43,7 @@
                             echo form_input(array('class' => 'form-control', 'type' => 'password', 'name' => 'senha', 'id' => 'senha', set_value('senha')));
                             echo div_open('form-group text-right');
                             echo '<br>';
-                            echo form_button(array('class' => 'btn btn-info', 'type' => 'submit', 'content' => 'Entrar'));
+                            echo form_button(array('class' => 'btn btn-laranja', 'type' => 'submit', 'content' => 'Entrar'));
                             echo div_close();
                             echo form_close();
                             ?>

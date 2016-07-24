@@ -12,7 +12,7 @@ class Cursos extends CI_Controller {
         $this->load->helper('form');
         $this->load->model('cursos_model', 'cursos');
         $this->load->library('form_validation');
-        $this->output->enable_profiler(TRUE);
+        //$this->output->enable_profiler(TRUE);
     }
 
     public function index() {

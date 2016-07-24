@@ -5,7 +5,7 @@ if (($this->session->flashdata('success'))) {
 }
 
 
-echo anchor('cursos/add', '<i class="fa fa-plus" aria-hidden="true"></i> Adicionar', array('class' => 'btn btn-primary'));
+echo anchor('cursos/add', '<i class="fa fa-plus" aria-hidden="true"></i> Adicionar', array('class' => 'btn btn-success'));
 
 $template = array(
     'table_open' => '<table class="table table-striped">',
