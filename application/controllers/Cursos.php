@@ -16,6 +16,7 @@ class Cursos extends CI_Controller {
     }
 
     public function index() {
+        $this->load->library('pagination');
         $cursos = $this->cursos->visualizar();
         
         $this->load->templete("admin/cursos/index.php", compact("cursos"));
